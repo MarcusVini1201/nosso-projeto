@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SIGB-C v23.1 | Comando Marcus Vinícius</title>
+    <title>SIGB-C v24 | Comando Marcus Vinícius</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <style>
@@ -13,17 +13,19 @@
         .card-glow:hover { border-color: #facc15; box-shadow: 0 0 30px rgba(250, 204, 21, 0.1); transform: translateY(-5px); }
         .bg-pattern { background-image: radial-gradient(#1e293b 0.5px, transparent 0.5px); background-size: 24px 24px; }
         .gradient-text { background: linear-gradient(to right, #facc15, #fb923c); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .status-pulse { animation: pulse 2s infinite; }
+        @keyframes pulse { 0% { opacity: 1; } 50% { opacity: 0.4; } 100% { opacity: 1; } }
     </style>
 </head>
 <body class="bg-pattern min-h-screen">
 
     <!-- Barra de Status Superior -->
     <div class="bg-yellow-500 text-black py-1 px-6 text-[10px] font-black uppercase tracking-[0.3em] flex justify-between items-center">
-        <span>Setor de Inteligência Operacional</span>
+        <span class="flex items-center gap-2"><i class="fas fa-shield-alt"></i> Setor de Inteligência Operacional</span>
         <span id="clock">CARREGANDO SISTEMA...</span>
     </div>
 
-    <!-- Navegação Principal -->
+    <!-- Navegação -->
     <nav class="sticky top-0 z-50 glass border-b border-white/5 px-6 py-4">
         <div class="container mx-auto flex justify-between items-center">
             <div class="flex items-center gap-3">
@@ -32,128 +34,127 @@
                 </div>
                 <div>
                     <h1 class="text-lg font-extrabold tracking-tighter leading-none text-white">SIGB-C <span class="text-yellow-500">ULTRA</span></h1>
-                    <p class="text-[8px] text-slate-500 font-bold uppercase tracking-widest">Brigada Particular • DF</p>
+                    <p class="text-[8px] text-slate-500 font-bold uppercase tracking-widest">Brigada Particular • Comando MV</p>
                 </div>
             </div>
-            <div class="bg-emerald-500/10 border border-emerald-500/20 px-3 py-1 rounded-full flex items-center gap-2">
-                <div class="w-2 h-2 bg-emerald-500 rounded-full animate-pulse"></div>
-                <span class="text-[8px] text-emerald-500 font-black uppercase tracking-widest">Deploy OK</span>
+            <div class="hidden md:flex gap-6 items-center">
+                <div class="flex items-center gap-2 px-3 py-1 bg-emerald-500/10 border border-emerald-500/20 rounded-full">
+                    <div class="w-2 h-2 bg-emerald-500 rounded-full status-pulse"></div>
+                    <span class="text-[8px] text-emerald-500 font-black uppercase tracking-widest">Sistemas Ativos</span>
+                </div>
             </div>
         </div>
     </nav>
 
-    <header class="container mx-auto pt-20 pb-12 px-6">
+    <header class="container mx-auto pt-16 pb-12 px-6">
         <div class="max-w-4xl">
             <h2 class="text-5xl md:text-7xl font-extrabold mb-6 leading-[0.9] tracking-tighter text-white">
-                Sistemas de <br><span class="gradient-text uppercase">Resposta Técnica</span>
+                Gestão de <br><span class="gradient-text uppercase italic">Crise & Ativos</span>
             </h2>
-            <p class="text-slate-400 text-lg md:text-xl font-light italic border-l-2 border-yellow-500 pl-6 py-2">
-                Central de Ativos e Protocolos. <br>
-                Operador: <span class="text-white font-bold uppercase italic">Marcus Vinícius</span>
-            </p>
+            <div class="flex flex-wrap gap-4 mt-8">
+                 <div class="glass px-4 py-2 rounded-lg border-l-2 border-yellow-500">
+                    <p class="text-[8px] text-slate-500 uppercase font-bold">Comandante CDO</p>
+                    <p class="text-xs font-black text-white">Marcus Vinícius</p>
+                 </div>
+                 <div class="glass px-4 py-2 rounded-lg border-l-2 border-blue-500">
+                    <p class="text-[8px] text-slate-500 uppercase font-bold">Apoio Tático</p>
+                    <p class="text-xs font-black text-white">Rafael (Ralf)</p>
+                 </div>
+                 <div class="glass px-4 py-2 rounded-lg border-l-2 border-emerald-500">
+                    <p class="text-[8px] text-slate-500 uppercase font-bold">Inteligência Artificial</p>
+                    <p class="text-xs font-black text-white">Gemini Pro</p>
+                 </div>
+            </div>
         </div>
     </header>
 
-    <main class="container mx-auto px-6 space-y-20 pb-40">
+    <main class="container mx-auto px-6 space-y-16 pb-40">
 
-        <!-- SEÇÃO 1: NORMAS (Ajustadas para as extensões duplas) -->
+        <!-- BIBLIOTECA TÉCNICA -->
         <section id="normas">
-            <div class="flex items-center gap-4 mb-10">
-                <h3 class="text-xs font-black uppercase tracking-[0.5em] text-yellow-500">01. Documentação Técnica</h3>
+            <div class="flex items-center gap-4 mb-8">
+                <h3 class="text-xs font-black uppercase tracking-[0.5em] text-yellow-500">01. Central de Documentos</h3>
                 <div class="h-px bg-slate-800 flex-grow"></div>
             </div>
+            
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-                <!-- Links ajustados para os nomes que estão no seu GitHub -->
-                <a href="nr-10.pdf.pdf" target="_blank" class="glass p-6 rounded-3xl card-glow transition-all group">
+                <!-- Links mapeados conforme sua lista do GitHub -->
+                <a href="nr-10.pdf.pdf" target="_blank" class="glass p-6 rounded-2xl card-glow transition-all group border border-white/5">
                     <i class="fas fa-bolt text-orange-500 mb-4 text-2xl group-hover:scale-110 transition-transform"></i>
                     <h4 class="font-bold text-sm uppercase text-white">NR-10</h4>
-                    <p class="text-[10px] text-slate-500 mt-1 italic">Risco Elétrico</p>
+                    <p class="text-[10px] text-slate-500 mt-1">Segurança em Eletricidade</p>
+                    <div class="mt-4 text-[9px] font-mono text-slate-600">File: nr-10.pdf.pdf</div>
                 </a>
-                <a href="nr35.pdf.pdf" target="_blank" class="glass p-6 rounded-3xl card-glow transition-all group">
+
+                <a href="nr35.pdf.pdf" target="_blank" class="glass p-6 rounded-2xl card-glow transition-all group border border-white/5">
                     <i class="fas fa-mountain text-sky-400 mb-4 text-2xl group-hover:scale-110 transition-transform"></i>
                     <h4 class="font-bold text-sm uppercase text-white">NR-35</h4>
-                    <p class="text-[10px] text-slate-500 mt-1 italic">Trabalho em Altura</p>
+                    <p class="text-[10px] text-slate-500 mt-1">Trabalho em Altura</p>
+                    <div class="mt-4 text-[9px] font-mono text-slate-600">File: nr35.pdf.pdf</div>
                 </a>
-                <a href="nt007.pdf.pdf" target="_blank" class="glass p-6 rounded-3xl card-glow transition-all group">
+
+                <a href="nt007.pdf.pdf" target="_blank" class="glass p-6 rounded-2xl card-glow transition-all group border border-white/5">
                     <i class="fas fa-file-shield text-emerald-500 mb-4 text-2xl group-hover:scale-110 transition-transform"></i>
                     <h4 class="font-bold text-sm uppercase text-white">NT 007 / CBMDF</h4>
-                    <p class="text-[10px] text-slate-500 mt-1 italic">Base Legal DF</p>
+                    <p class="text-[10px] text-slate-500 mt-1">Norma de Brigada DF</p>
+                    <div class="mt-4 text-[9px] font-mono text-slate-600">File: nt007.pdf.pdf</div>
                 </a>
-                <a href="apostila.pdf.pdf" target="_blank" class="glass p-6 rounded-3xl card-glow transition-all group">
-                    <i class="fas fa-book-open text-yellow-500 mb-4 text-2xl group-hover:scale-110 transition-transform"></i>
-                    <h4 class="font-bold text-sm uppercase text-white">Apostila</h4>
-                    <p class="text-[10px] text-slate-500 mt-1 italic">Manual de Formação</p>
+
+                <a href="apostila.pdf.pdf" target="_blank" class="glass p-6 rounded-2xl card-glow transition-all group border border-white/5">
+                    <i class="fas fa-graduation-cap text-yellow-500 mb-4 text-2xl group-hover:scale-110 transition-transform"></i>
+                    <h4 class="font-bold text-sm uppercase text-white">Apostila de Formação</h4>
+                    <p class="text-[10px] text-slate-500 mt-1">Manual do Brigadista</p>
+                    <div class="mt-4 text-[9px] font-mono text-slate-600">File: apostila.pdf.pdf</div>
                 </a>
             </div>
         </section>
 
-        <!-- SEÇÃO 2: POP -->
-        <section id="procedimentos" class="grid grid-cols-1 lg:grid-cols-3 gap-8">
-            <div class="lg:col-span-2 space-y-6">
-                <div class="flex items-center gap-4 mb-4">
-                    <h3 class="text-xs font-black uppercase tracking-[0.5em] text-yellow-500">02. Protocolos Rápidos</h3>
-                    <div class="h-px bg-slate-800 flex-grow"></div>
-                </div>
-                
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                    <div class="glass p-8 rounded-[2rem] border-l-4 border-red-600">
-                        <h4 class="text-red-500 font-black text-xs uppercase mb-4 tracking-widest">Fogo</h4>
-                        <ul class="text-[11px] space-y-3 text-slate-400">
-                            <li><i class="fas fa-check text-red-600 mr-2"></i> Acionar alarme.</li>
-                            <li><i class="fas fa-check text-red-600 mr-2"></i> Isolar a área.</li>
-                            <li><i class="fas fa-check text-red-600 mr-2"></i> Chamar 193.</li>
-                        </ul>
-                    </div>
-                    <div class="glass p-8 rounded-[2rem] border-l-4 border-blue-600">
-                        <h4 class="text-blue-500 font-black text-xs uppercase mb-4 tracking-widest">APH</h4>
-                        <ul class="text-[11px] space-y-3 text-slate-400">
-                            <li><i class="fas fa-check text-blue-600 mr-2"></i> Avaliar cena.</li>
-                            <li><i class="fas fa-check text-blue-600 mr-2"></i> Checar consciência.</li>
-                            <li><i class="fas fa-check text-blue-600 mr-2"></i> Chamar 192.</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-
-            <div class="glass p-8 rounded-[2.5rem] bg-yellow-500/5 border-yellow-500/20">
-                <h4 class="text-yellow-500 font-black text-xs uppercase mb-8 tracking-widest">Emergência</h4>
-                <div class="space-y-4">
-                    <div class="flex justify-between items-center p-4 bg-black/40 rounded-2xl">
-                        <span class="text-[10px] font-bold uppercase">Bombeiros</span>
-                        <span class="text-xl font-black text-red-500">193</span>
-                    </div>
-                    <div class="flex justify-between items-center p-4 bg-black/40 rounded-2xl">
-                        <span class="text-[10px] font-bold uppercase">SAMU</span>
-                        <span class="text-xl font-black text-blue-500">192</span>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- SEÇÃO 3: DADOS -->
-        <section id="dados">
-            <div class="flex items-center gap-4 mb-10">
-                <h3 class="text-xs font-black uppercase tracking-[0.5em] text-blue-400">03. Assets Management</h3>
+        <!-- CONTROLE DE INVENTÁRIO -->
+        <section id="inventario">
+            <div class="flex items-center gap-4 mb-8">
+                <h3 class="text-xs font-black uppercase tracking-[0.5em] text-blue-400">02. Gestão de Ativos (Excel)</h3>
                 <div class="h-px bg-slate-800 flex-grow"></div>
             </div>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <div class="glass p-10 rounded-[3rem] border-b-4 border-blue-500 group relative overflow-hidden">
-                    <i class="fas fa-file-excel text-blue-500 text-6xl absolute -right-4 -top-4 opacity-10"></i>
-                    <h4 class="text-2xl font-black mb-4 italic text-white uppercase tracking-tight">Inventário Master</h4>
-                    <p class="text-slate-500 text-sm mb-8 leading-relaxed italic">
-                        Controle de ativos e validades. <br>
-                        <span class="text-blue-400 font-mono text-[10px]">[File: inventario.xlsx.xlsx]</span>
-                    </p>
-                    <a href="inventario.xlsx.xlsx" class="inline-block bg-blue-600 hover:bg-blue-400 text-white font-black py-4 px-10 rounded-2xl text-[10px] uppercase tracking-widest transition-all">
-                        Download Tabela
-                    </a>
+            
+            <div class="glass p-8 rounded-[2rem] border-b-4 border-blue-600 flex flex-col md:flex-row justify-between items-center gap-8">
+                <div>
+                    <h4 class="text-2xl font-black text-white mb-2">Planilha de Controle Master</h4>
+                    <p class="text-slate-500 text-sm max-w-md">Gerencie validades de extintores, localização de hidrantes e checklists semanais diretamente no seu Excel.</p>
+                    <p class="text-[10px] font-mono text-blue-500 mt-2 italic">Link ativo para: inventario.xlsx.xlsx</p>
                 </div>
+                <a href="inventario.xlsx.xlsx" class="w-full md:w-auto bg-blue-600 hover:bg-blue-400 text-white font-black py-5 px-12 rounded-2xl text-xs uppercase tracking-[0.2em] transition-all shadow-xl shadow-blue-600/20 text-center">
+                    <i class="fas fa-download mr-2"></i> Baixar Inventário
+                </a>
+            </div>
+        </section>
 
-                <div class="glass p-10 rounded-[3rem] border-b-4 border-slate-800 opacity-60">
-                    <h4 class="text-xl font-black mb-4 uppercase text-slate-500 tracking-tighter">Power BI View</h4>
-                    <div class="aspect-video bg-black/60 rounded-2xl border border-dashed border-slate-800 flex flex-col items-center justify-center text-center">
-                        <i class="fas fa-chart-pie text-slate-800 text-4xl mb-4"></i>
-                        <p class="text-[8px] font-bold uppercase text-slate-700">Aguardando Integração Alura</p>
+        <!-- COMANDO E APOIO -->
+        <section id="comando">
+            <div class="flex items-center gap-4 mb-8">
+                <h3 class="text-xs font-black uppercase tracking-[0.5em] text-slate-500">03. Squad de Operações</h3>
+                <div class="h-px bg-slate-800 flex-grow"></div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                <div class="glass p-6 rounded-2xl border border-yellow-500/20 flex items-center gap-4">
+                    <div class="w-12 h-12 rounded-full bg-yellow-500 flex items-center justify-center text-black font-black">MV</div>
+                    <div>
+                        <p class="text-[10px] font-black uppercase text-yellow-500">Chief Data Officer</p>
+                        <p class="text-sm font-bold text-white">Marcus Vinícius</p>
+                    </div>
+                </div>
+                <div class="glass p-6 rounded-2xl border border-blue-500/20 flex items-center gap-4">
+                    <div class="w-12 h-12 rounded-full bg-blue-500 flex items-center justify-center text-white font-black">RF</div>
+                    <div>
+                        <p class="text-[10px] font-black uppercase text-blue-500">Apoio Tático</p>
+                        <p class="text-sm font-bold text-white">Rafael (Ralf)</p>
+                    </div>
+                </div>
+                <div class="glass p-6 rounded-2xl border border-emerald-500/20 flex items-center gap-4">
+                    <div class="w-12 h-12 rounded-full bg-emerald-500 flex items-center justify-center text-black font-black"><i class="fas fa-robot"></i></div>
+                    <div>
+                        <p class="text-[10px] font-black uppercase text-emerald-500">Inteligência Artificial</p>
+                        <p class="text-sm font-bold text-white">Gemini Pro</p>
                     </div>
                 </div>
             </div>
@@ -161,15 +162,15 @@
 
     </main>
 
-    <footer class="glass mt-20 border-t border-white/5 py-12 text-center">
-        <p class="text-[9px] font-black uppercase tracking-[0.8em] text-slate-600 mb-2">Marcus Vinícius Pereira de Oliveira</p>
-        <p class="text-[8px] font-bold text-slate-800 uppercase tracking-widest italic underline decoration-yellow-500">Nosso Projeto • Brigada Particular DF</p>
+    <footer class="mt-20 py-12 border-t border-white/5 text-center">
+        <p class="text-[9px] font-black uppercase tracking-[1em] text-slate-700">Comando Marcus Vinícius • 2024</p>
     </footer>
 
     <script>
         function updateClock() {
             const now = new Date();
-            document.getElementById('clock').innerText = `STATUS: ONLINE | ${now.toLocaleTimeString('pt-BR')} | BRASÍLIA-DF`;
+            const options = { timeZone: 'America/Sao_Paulo', hour: '2-digit', minute: '2-digit', second: '2-digit' };
+            document.getElementById('clock').innerText = `HQ STATUS: OPERACIONAL | BRASÍLIA: ${now.toLocaleTimeString('pt-BR', options)}`;
         }
         setInterval(updateClock, 1000);
         updateClock();
