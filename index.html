@@ -3,188 +3,213 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SIGB-C v35.0 | Aliança Marcus & Ralf</title>
+    <title>SIGB-C v40.0 | Wiki Prime Operacional</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;700;800&display=swap');
         body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: #020617; color: #f1f5f9; }
-        .glass { background: rgba(15, 23, 42, 0.8); backdrop-filter: blur(20px); border: 1px solid rgba(255, 255, 255, 0.08); }
-        .card-glow:hover { border-color: #facc15; box-shadow: 0 0 40px rgba(250, 204, 21, 0.15); transform: translateY(-3px); }
+        .glass { background: rgba(15, 23, 42, 0.85); backdrop-filter: blur(20px); border: 1px solid rgba(255, 255, 255, 0.08); }
+        .card-glow:hover { border-color: #facc15; box-shadow: 0 0 50px rgba(250, 204, 21, 0.15); transform: translateY(-4px); }
         .bg-grid { background-image: linear-gradient(to right, #1e293b 1px, transparent 1px), linear-gradient(to bottom, #1e293b 1px, transparent 1px); background-size: 40px 40px; }
         .gradient-text { background: linear-gradient(to right, #facc15, #fb923c); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
         .status-pulse { animation: pulse 2s infinite; }
         @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.4; } }
+        .wiki-item:nth-child(even) { background: rgba(255, 255, 255, 0.02); }
     </style>
 </head>
-<body class="bg-grid min-h-screen">
+<body class="bg-grid min-h-screen pb-20">
 
-    <!-- Terminal de Operações -->
+    <!-- Terminal de Status -->
     <div class="bg-black/90 border-b border-yellow-500/30 px-8 py-2 flex justify-between items-center sticky top-0 z-[100]">
-        <div class="flex items-center gap-4">
+        <div class="flex items-center gap-4 text-yellow-500">
             <span class="w-2 h-2 rounded-full bg-emerald-500 status-pulse"></span>
-            <span class="text-[10px] font-black tracking-[0.4em] text-yellow-500 uppercase font-mono italic">CIOB Intel Engine v35.0 - Aliança de Comando Ativa</span>
+            <span class="text-[10px] font-black tracking-[0.4em] uppercase font-mono italic">SIGB-C v40.0 - Wiki Prime & Handover Protocol</span>
         </div>
-        <div id="clock" class="font-mono text-[10px] text-slate-500 tracking-widest italic"></div>
+        <div id="clock" class="font-mono text-[10px] text-slate-500 tracking-widest uppercase italic"></div>
     </div>
 
+    <!-- Navegação e Identidade -->
     <nav class="p-6">
         <div class="glass max-w-7xl mx-auto rounded-3xl p-5 flex justify-between items-center border-white/5 shadow-2xl">
             <div class="flex items-center gap-5">
                 <div class="w-12 h-12 bg-yellow-500 rounded-2xl flex items-center justify-center text-black shadow-lg">
-                    <i class="fas fa-network-wired text-2xl"></i>
+                    <i class="fas fa-book-medical text-2xl"></i>
                 </div>
                 <div>
-                    <h1 class="text-2xl font-black tracking-tighter italic uppercase text-white leading-none">SIGB-C <span class="text-yellow-500">v35.0</span></h1>
-                    <p class="text-[8px] font-black uppercase tracking-[0.3em] text-slate-500 italic">Mural de Comando & Linguagem do Povo</p>
+                    <h1 class="text-2xl font-black tracking-tighter italic uppercase text-white leading-none">SIGB-C <span class="text-yellow-500">v40.0</span></h1>
+                    <p class="text-[8px] font-black uppercase tracking-[0.3em] text-slate-500 italic">Wiki Prime Marcus V. & Ralf</p>
                 </div>
             </div>
             <div class="hidden md:flex flex-col items-end">
-                <span class="text-[8px] text-slate-500 font-bold uppercase tracking-widest">Apoio: Ralf & Gemini</span>
-                <span class="text-[9px] text-emerald-400 font-black italic uppercase">Status: 100% Sincronizado</span>
+                <span class="text-[8px] text-slate-500 font-bold uppercase tracking-widest">Posto: CIOSP/CIOB - DF</span>
+                <span class="text-[9px] text-emerald-400 font-black italic uppercase">Operação 100% Sincronizada</span>
             </div>
         </div>
     </nav>
 
-    <main class="max-w-7xl mx-auto px-6 py-10 space-y-16 pb-40">
+    <main class="max-w-7xl mx-auto px-6 py-10 space-y-16">
         
-        <!-- SEÇÃO: MURAL DE COMANDO (PROSPECÇÃO E CARREIRA) -->
+        <!-- SQUAD DE COMANDO (PROSPECÇÃO) -->
         <section id="squad">
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <!-- Card Marcus -->
                 <div class="glass p-8 rounded-[3rem] border border-white/5 card-glow transition-all flex flex-col md:flex-row items-center gap-8">
-                    <div class="w-24 h-24 rounded-full bg-yellow-500 flex items-center justify-center text-black text-3xl font-black shadow-xl">MV</div>
+                    <div class="w-20 h-20 rounded-full bg-yellow-500 flex items-center justify-center text-black text-2xl font-black">MV</div>
                     <div class="text-center md:text-left">
-                        <h3 class="text-xl font-black italic text-white uppercase leading-none mb-2">Marcus Vinícius</h3>
-                        <p class="text-[10px] text-yellow-500 font-black uppercase tracking-[0.2em] mb-4">CDO & Analista de Estratégia</p>
-                        <a href="https://linkedin.com/in/marcus-vinícius-335552148" target="_blank" class="inline-flex items-center gap-2 bg-blue-600 hover:bg-white hover:text-blue-600 text-white px-5 py-2.5 rounded-xl text-[10px] font-black uppercase transition-all">
-                            <i class="fab fa-linkedin"></i> LinkedIn do Marcus
+                        <h3 class="text-xl font-black italic text-white uppercase italic">Marcus Vinícius</h3>
+                        <p class="text-[10px] text-yellow-500 font-black uppercase mb-4">CDO & Analista Master</p>
+                        <a href="https://linkedin.com/in/marcus-vinícius-335552148" target="_blank" class="inline-flex items-center gap-2 bg-blue-600 hover:bg-white hover:text-blue-600 text-white px-5 py-2.5 rounded-xl text-[10px] font-black uppercase transition-all shadow-lg">
+                            <i class="fab fa-linkedin"></i> Ver Perfil
                         </a>
                     </div>
                 </div>
-
-                <!-- Card Ralf -->
                 <div class="glass p-8 rounded-[3rem] border border-white/5 card-glow transition-all flex flex-col md:flex-row items-center gap-8">
-                    <div class="w-24 h-24 rounded-full bg-blue-500 flex items-center justify-center text-white text-3xl font-black shadow-xl">RF</div>
+                    <div class="w-20 h-20 rounded-full bg-blue-600 flex items-center justify-center text-white text-2xl font-black">RF</div>
                     <div class="text-center md:text-left">
-                        <h3 class="text-xl font-black italic text-white uppercase leading-none mb-2">Rafael (Ralf)</h3>
-                        <p class="text-[10px] text-blue-400 font-black uppercase tracking-[0.2em] mb-4">Especialista em Logística Tática</p>
-                        <a href="https://linkedin.com/in/rafooc" target="_blank" class="inline-flex items-center gap-2 bg-blue-700 hover:bg-white hover:text-blue-700 text-white px-5 py-2.5 rounded-xl text-[10px] font-black uppercase transition-all">
-                            <i class="fab fa-linkedin"></i> LinkedIn do Ralf
+                        <h3 class="text-xl font-black italic text-white uppercase italic">Rafael (Ralf)</h3>
+                        <p class="text-[10px] text-blue-400 font-black uppercase mb-4">Especialista Tático</p>
+                        <a href="https://linkedin.com/in/rafooc" target="_blank" class="inline-flex items-center gap-2 bg-blue-700 hover:bg-white hover:text-blue-700 text-white px-5 py-2.5 rounded-xl text-[10px] font-black uppercase transition-all shadow-lg">
+                            <i class="fab fa-linkedin"></i> Ver Perfil
                         </a>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- SEÇÃO: MANUAL DO POVO (A SEGURANÇA NA LÍNGUA DO DIA A DIA) -->
-        <section id="manual">
-            <header class="mb-10 text-center md:text-left">
-                <h2 class="text-4xl font-black italic tracking-tighter uppercase text-white leading-none">O Manual <span class="text-emerald-500">do Povo</span></h2>
-                <p class="text-[10px] text-slate-500 font-bold uppercase tracking-[0.3em] mt-2 italic">A gente entende, a gente protege. Sem tecniquês.</p>
+        <!-- WIKI PRIME: CATÁLOGO DE MATERIAIS & PROCEDIMENTOS -->
+        <section id="wiki-prime">
+            <header class="mb-10">
+                <h2 class="text-4xl font-black italic tracking-tighter uppercase text-white leading-none italic">Wiki <span class="text-yellow-500">Prime</span></h2>
+                <p class="text-[10px] text-slate-500 font-bold uppercase tracking-[0.3em] mt-2 italic">Como usar e para que serve (Linguagem do Povo)</p>
             </header>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                <!-- Saídas -->
-                <div class="glass p-8 rounded-[2.5rem] border-l-4 border-yellow-500 card-glow transition-all">
-                    <h4 class="text-yellow-500 font-black text-xs uppercase mb-3 italic tracking-widest flex justify-between">Saídas (NT 10) <i class="fas fa-door-open"></i></h4>
-                    <p class="text-[11px] text-slate-400 leading-relaxed font-bold uppercase italic">
-                        "É a rota de fuga. A escada tem que estar livre igual pista de aeroporto. Nada de tranca ou lixo no caminho. Se precisar correr, o caminho tem que estar limpo."
-                    </p>
-                </div>
-                <!-- Luzes -->
-                <div class="glass p-8 rounded-[2.5rem] border-l-4 border-blue-500 card-glow transition-all">
-                    <h4 class="text-blue-500 font-black text-xs uppercase mb-3 italic tracking-widest flex justify-between">Luzes (NT 21) <i class="fas fa-bolt-lightning"></i></h4>
-                    <p class="text-[11px] text-slate-400 leading-relaxed font-bold uppercase italic">
-                        "Ficou tudo escuro? As baterias têm que segurar a onda por 1 hora. O foco é não deixar ninguém cego no meio da emergência pra achar a saída."
-                    </p>
-                </div>
-                <!-- Sinalização -->
-                <div class="glass p-8 rounded-[2.5rem] border-l-4 border-emerald-500 card-glow transition-all">
-                    <h4 class="text-emerald-500 font-black text-xs uppercase mb-3 italic tracking-widest flex justify-between">Placas (NT 22) <i class="fas fa-person-running"></i></h4>
-                    <p class="text-[11px] text-slate-400 leading-relaxed font-bold uppercase italic">
-                        "Siga o brilho verde. As placas mostram o destino. Elas brilham sozinhas pra você saber pra onde ir mesmo se tudo apagar."
-                    </p>
-                </div>
-            </div>
-        </section>
-
-        <!-- PROTOCOLO AHA 2025: VIDA EM FOCO -->
-        <section id="aha">
-            <div class="glass p-10 rounded-[3.5rem] border border-red-500/10 bg-red-600/5 relative overflow-hidden group">
-                <i class="fas fa-heart-pulse text-red-500/10 text-[15rem] absolute -right-10 -top-10"></i>
-                <div class="flex flex-col lg:flex-row justify-between items-center gap-12 relative z-10">
-                    <div class="max-w-2xl text-center lg:text-left">
-                        <h3 class="text-3xl font-black italic uppercase text-white leading-none mb-6">Diretrizes <span class="text-red-500">AHA 2025</span></h3>
-                        <div class="space-y-4">
-                            <div class="bg-black/40 p-4 rounded-2xl border border-white/5 flex items-center gap-4">
-                                <span class="w-8 h-8 rounded-lg bg-red-600 flex items-center justify-center font-black text-white shrink-0">1</span>
-                                <p class="text-[10px] font-black text-slate-300 uppercase tracking-tighter italic">Massagem: 100 a 120 compressões por minuto. Braços esticados e força no centro!</p>
-                            </div>
-                            <div class="bg-black/40 p-4 rounded-2xl border border-white/5 flex items-center gap-4">
-                                <span class="w-8 h-8 rounded-lg bg-orange-600 flex items-center justify-center font-black text-white shrink-0">2</span>
-                                <p class="text-[10px] font-black text-slate-300 uppercase tracking-tighter italic">Engasgo: Mão acima do umbigo, puxe pra dentro e pra cima em "J" com toda a força.</p>
-                            </div>
+            <div class="grid grid-cols-1 gap-4">
+                
+                <!-- Item: D.E.A -->
+                <div class="glass p-6 rounded-3xl border border-white/5 flex flex-col md:flex-row justify-between items-center gap-6 group hover:border-yellow-500/30 transition-all">
+                    <div class="flex items-center gap-6">
+                        <div class="w-16 h-16 bg-red-600/10 rounded-2xl flex items-center justify-center text-red-500">
+                            <i class="fas fa-heart-pulse text-2xl"></i>
+                        </div>
+                        <div>
+                            <h4 class="text-sm font-black text-white uppercase italic">D.E.A (Desfibrilador)</h4>
+                            <p class="text-[10px] text-slate-500 font-bold uppercase tracking-widest mt-1 italic">Norma: NR-07 / AHA 2025</p>
+                            <p class="text-[11px] text-slate-400 mt-2 max-w-xl italic">
+                                "É o aparelho que salva o coração. Ele fala com você. Ligue, cole as pás no peito e afaste todo mundo. Ele faz o trabalho sozinho."
+                            </p>
                         </div>
                     </div>
-                    <a href="aha.pdf" target="_blank" class="w-full lg:w-auto bg-red-600 hover:bg-white hover:text-red-600 text-white font-black py-8 px-16 rounded-3xl text-xs uppercase tracking-[0.4em] transition-all shadow-xl shadow-red-600/20 text-center">
-                        Abrir AHA 2025
-                    </a>
+                    <button class="bg-slate-900 border border-white/10 px-6 py-3 rounded-xl text-[10px] font-black uppercase text-yellow-500 hover:bg-yellow-500 hover:text-black transition-all">
+                        <i class="fas fa-play mr-2"></i> Ver Vídeo Aula
+                    </button>
                 </div>
+
+                <!-- Item: Hooligan -->
+                <div class="glass p-6 rounded-3xl border border-white/5 flex flex-col md:flex-row justify-between items-center gap-6 group hover:border-emerald-500/30 transition-all">
+                    <div class="flex items-center gap-6">
+                        <div class="w-16 h-16 bg-emerald-600/10 rounded-2xl flex items-center justify-center text-emerald-500">
+                            <i class="fas fa-hammer text-2xl"></i>
+                        </div>
+                        <div>
+                            <h4 class="text-sm font-black text-white uppercase italic">Ferramenta Hooligan</h4>
+                            <p class="text-[10px] text-slate-500 font-bold uppercase tracking-widest mt-1 italic">Norma: NT-07 CBMDF</p>
+                            <p class="text-[11px] text-slate-400 mt-2 max-w-xl italic">
+                                "A chave mestra da brigada. Serve para arrombar portas, cortar latarias e forçar aberturas em emergências de fogo."
+                            </p>
+                        </div>
+                    </div>
+                    <button class="bg-slate-900 border border-white/10 px-6 py-3 rounded-xl text-[10px] font-black uppercase text-emerald-500 hover:bg-emerald-500 hover:text-black transition-all">
+                        <i class="fas fa-play mr-2"></i> Ver Vídeo Aula
+                    </button>
+                </div>
+
+                <!-- Item: Prancha Rígida -->
+                <div class="glass p-6 rounded-3xl border border-white/5 flex flex-col md:flex-row justify-between items-center gap-6 group hover:border-blue-500/30 transition-all">
+                    <div class="flex items-center gap-6">
+                        <div class="w-16 h-16 bg-blue-600/10 rounded-2xl flex items-center justify-center text-blue-500">
+                            <i class="fas fa-bed-pulse text-2xl"></i>
+                        </div>
+                        <div>
+                            <h4 class="text-sm font-black text-white uppercase italic">Prancha Longa Rígida</h4>
+                            <p class="text-[10px] text-slate-500 font-bold uppercase tracking-widest mt-1 italic">Norma: NR-07 / APH</p>
+                            <p class="text-[11px] text-slate-400 mt-2 max-w-xl italic">
+                                "Para carregar quem não pode andar. Serve para imobilizar a coluna e transportar a vítima com segurança até a ambulância."
+                            </p>
+                        </div>
+                    </div>
+                    <button class="bg-slate-900 border border-white/10 px-6 py-3 rounded-xl text-[10px] font-black uppercase text-blue-500 hover:bg-blue-500 hover:text-black transition-all">
+                        <i class="fas fa-play mr-2"></i> Ver Vídeo Aula
+                    </button>
+                </div>
+
+                <!-- Item: Cinto Paraquedista -->
+                <div class="glass p-6 rounded-3xl border border-white/5 flex flex-col md:flex-row justify-between items-center gap-6 group hover:border-sky-500/30 transition-all">
+                    <div class="flex items-center gap-6">
+                        <div class="w-16 h-16 bg-sky-600/10 rounded-2xl flex items-center justify-center text-sky-500">
+                            <i class="fas fa-mountain text-2xl"></i>
+                        </div>
+                        <div>
+                            <h4 class="text-sm font-black text-white uppercase italic">Cinto Paraquedista</h4>
+                            <p class="text-[10px] text-slate-500 font-bold uppercase tracking-widest mt-1 italic">Norma: NR-35 (Altura)</p>
+                            <p class="text-[11px] text-slate-400 mt-2 max-w-xl italic">
+                                "Sua segurança no alto. Vestiu, travou e prendeu o talabarte. Se você escorregar, ele segura o seu corpo no ar."
+                            </p>
+                        </div>
+                    </div>
+                    <button class="bg-slate-900 border border-white/10 px-6 py-3 rounded-xl text-[10px] font-black uppercase text-sky-500 hover:bg-sky-500 hover:text-black transition-all">
+                        <i class="fas fa-play mr-2"></i> Ver Vídeo Aula
+                    </button>
+                </div>
+
             </div>
         </section>
 
-        <!-- DOWNLOADS SINCRONIZADOS (REPOSITÓRIO REAL) -->
+        <!-- DOWNLOADS SINCRONIZADOS -->
         <section id="downloads">
-            <header class="mb-8">
-                <h3 class="text-xs font-black uppercase tracking-[0.5em] text-slate-500 italic font-mono">Repositório GitHub (Sincronizado)</h3>
+            <header class="mb-8 flex items-center gap-4">
+                <div class="h-8 w-1 bg-slate-700 rounded-full"></div>
+                <h2 class="text-sm font-black uppercase tracking-[0.6em] text-slate-500 italic font-mono">Documentação GitHub Sync</h2>
             </header>
             
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-                <!-- NT 10 Real -->
                 <a href="NT10SaidasdeEmergencia.pdf" target="_blank" class="glass p-5 rounded-2xl card-glow border-l-4 border-yellow-500 flex justify-between items-center group">
-                    <span class="text-[10px] font-black text-white uppercase group-hover:text-yellow-500 transition-colors italic">NT 10 - Saídas</span>
+                    <span class="text-[9px] font-black text-white uppercase italic">NT 10 - Saídas</span>
                     <i class="fas fa-file-pdf text-slate-700"></i>
                 </a>
-                <!-- NT 21 Real -->
                 <a href="NT021ILUMINACAODEEMERGENCIAAPROVADO-FINAL.pdf" target="_blank" class="glass p-5 rounded-2xl card-glow border-l-4 border-blue-500 flex justify-between items-center group">
-                    <span class="text-[10px] font-black text-white uppercase group-hover:text-blue-500 transition-colors italic">NT 21 - Luzes</span>
+                    <span class="text-[9px] font-black text-white uppercase italic">NT 21 - Iluminação</span>
                     <i class="fas fa-file-pdf text-slate-700"></i>
                 </a>
-                <!-- NT 22 Real -->
                 <a href="NormaTecnica222020CBMDFSistemadeSinalizacaodeSegurancaContraIncendioePanico.pdf" target="_blank" class="glass p-5 rounded-2xl card-glow border-l-4 border-emerald-500 flex justify-between items-center group">
-                    <span class="text-[10px] font-black text-white uppercase group-hover:text-emerald-500 transition-colors italic">NT 22 - Sinais</span>
+                    <span class="text-[9px] font-black text-white uppercase italic text-[8px]">NT 22 - Sinalização</span>
                     <i class="fas fa-file-pdf text-slate-700"></i>
                 </a>
-                <!-- NR 26 Real -->
                 <a href="NR26SINALIZAÇÃO.pdf" target="_blank" class="glass p-5 rounded-2xl card-glow border-l-4 border-orange-500 flex justify-between items-center group">
-                    <span class="text-[10px] font-black text-white uppercase group-hover:text-orange-500 transition-colors italic">NR 26 - Cores</span>
+                    <span class="text-[9px] font-black text-white uppercase italic">NR 26 - Cores</span>
                     <i class="fas fa-file-pdf text-slate-700"></i>
                 </a>
-                <!-- Lei Lucas Real -->
-                <a href="leilucas.pdf" target="_blank" class="glass p-5 rounded-2xl card-glow border-l-4 border-red-500 flex justify-between items-center group">
-                    <span class="text-[10px] font-black text-white uppercase group-hover:text-red-500 transition-colors italic">Lei Lucas</span>
+                <a href="aha.pdf" target="_blank" class="glass p-5 rounded-2xl card-glow border-l-4 border-red-500 flex justify-between items-center group">
+                    <span class="text-[9px] font-black text-white uppercase italic">AHA 2025</span>
                     <i class="fas fa-file-pdf text-slate-700"></i>
                 </a>
-                <!-- NT 07 Base -->
-                <a href="nt007.pdf.pdf" target="_blank" class="glass p-5 rounded-2xl card-glow border-l-4 border-slate-500 flex justify-between items-center group">
-                    <span class="text-[10px] font-black text-white uppercase group-hover:text-slate-400 transition-colors italic">NT 07 - Base</span>
-                    <i class="fas fa-file-pdf text-slate-700"></i>
+                <a href="inventario.xlsx.xlsx" target="_blank" class="glass p-5 rounded-2xl card-glow border-l-4 border-white flex justify-between items-center group">
+                    <span class="text-[9px] font-black text-white uppercase italic">Inventário Master</span>
+                    <i class="fas fa-file-excel text-slate-700"></i>
                 </a>
             </div>
         </section>
 
     </main>
 
-    <footer class="py-16 text-center border-t border-white/5 bg-slate-950/50">
-        <p class="text-[9px] font-black uppercase tracking-[1em] text-slate-800 italic">Cyber Intelligence Operational Brigade • 2026</p>
+    <footer class="py-20 border-t border-white/5 bg-slate-950/50 text-center">
+        <p class="text-[10px] font-black text-slate-800 uppercase tracking-[1.5em] italic">Cyber Intelligence Operational Brigade • 2026</p>
     </footer>
 
     <script>
         function updateClock() {
             const now = new Date();
             const time = now.toLocaleTimeString('pt-BR', { hour: '2-digit', minute: '2-digit', second: '2-digit' });
-            document.getElementById('clock').innerText = `HQ STATUS: OPERACIONAL | SINC-SYNC: GITHUB | ${time}`;
+            document.getElementById('clock').innerText = `HQ STATUS: OPERACIONAL | SINC: GITHUB SYNC | ${time}`;
         }
         setInterval(updateClock, 1000);
         updateClock();
