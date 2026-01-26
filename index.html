@@ -12,7 +12,7 @@ import {
  * SIGB-C v61.1 MASTER - REINO DA CIÊNCIA
  * Desenvolvido por: Marcus Vinícius (General)
  * Mantra: "O amanhã é consequência das escolhas passadas."
- * Status: Recuperado de Falha de Renderização (Tela Branca)
+ * Status: Recuperado de Falha de Renderização (Estável)
  */
 
 const App = () => {
@@ -25,12 +25,12 @@ const App = () => {
     return () => clearInterval(timer);
   }, []);
 
-  // Base de Dados com os nomes reais dos arquivos no seu GitHub
+  // Base de Dados com os nomes reais dos ficheiros no seu GitHub
   const inventoryData = [
     { 
       id: 1, 
       cat: 'AHA 2025', 
-      title: 'D.E.A (Desfibrilador)', 
+      title: 'D.E.A (Desfibrilhador)', 
       ca: 'Equipamento Técnico',
       validade: 'Jan/2027',
       manual: 'Ligue o aparelho e siga as instruções de voz. Cole as pás no tórax limpo.',
@@ -103,14 +103,14 @@ const App = () => {
       <main className="max-w-7xl mx-auto px-6 py-12">
         
         {/* HERO SECTION */}
-        <div className="mb-16">
+        <div className="mb-16 text-center md:text-left">
           <h2 className="text-4xl md:text-6xl font-black italic uppercase text-white tracking-tighter mb-4 leading-none">
             Wiki <span className="text-[#facc15]">Master</span>
           </h2>
-          <div className="h-1 w-20 bg-[#facc15] rounded-full mb-8"></div>
+          <div className="h-1 w-20 bg-[#facc15] rounded-full mb-8 mx-auto md:mx-0"></div>
           
           {/* TABS NAVEGAÇÃO */}
-          <div className="flex flex-wrap gap-3">
+          <div className="flex flex-wrap gap-3 justify-center md:justify-start">
             {[
               { id: 'Inventario', label: 'Inventário (43 Itens)', icon: <Package size={14}/> },
               { id: 'Compliance', label: 'Gestão de C.A.', icon: <Scale size={14}/> },
@@ -128,9 +128,9 @@ const App = () => {
         </div>
 
         {activeTab === 'Inventario' && (
-          <div className="space-y-8">
+          <div className="space-y-8 animate-in fade-in duration-500">
             {/* SEARCH BAR */}
-            <div className="relative max-w-xl">
+            <div className="relative max-w-xl mx-auto md:mx-0">
               <Search className="absolute left-4 top-1/2 -translate-y-1/2 text-slate-600" size={18} />
               <input 
                 type="text" 
@@ -178,7 +178,7 @@ const App = () => {
         )}
 
         {activeTab === 'Compliance' && (
-           <div className="bg-[#080a05] rounded-3xl border border-white/5 p-8">
+           <div className="bg-[#080a05] rounded-3xl border border-white/5 p-8 animate-in zoom-in-95 duration-500">
              <div className="flex items-center gap-3 mb-8">
                <Scale className="text-[#facc15]" size={24} />
                <h3 className="text-2xl font-black text-white uppercase tracking-tighter italic">Controle de C.A. // NR-06</h3>
@@ -188,8 +188,8 @@ const App = () => {
                   <thead>
                     <tr className="text-[10px] font-black text-slate-500 uppercase tracking-widest border-b border-white/5">
                       <th className="pb-4">Material</th>
-                      <th className="pb-4">Nº Certificado</th>
-                      <th className="pb-4">Validade</th>
+                      <th className="pb-4 text-center">Nº Certificado</th>
+                      <th className="pb-4 text-center">Validade</th>
                       <th className="pb-4 text-right">Ação</th>
                     </tr>
                   </thead>
@@ -197,8 +197,8 @@ const App = () => {
                     {inventoryData.map(i => (
                       <tr key={i.id} className="text-xs hover:bg-white/5 transition-colors">
                         <td className="py-5 font-bold text-white uppercase italic">{i.title}</td>
-                        <td className="py-5 font-mono text-[#facc15]">{i.ca}</td>
-                        <td className="py-5 text-slate-400">{i.validade}</td>
+                        <td className="py-5 text-center font-mono text-[#facc15]">{i.ca}</td>
+                        <td className="py-5 text-center text-slate-400">{i.validade}</td>
                         <td className="py-5 text-right">
                           <a href={i.file} download className="inline-flex p-2 bg-white/5 rounded-lg text-slate-500 hover:text-[#facc15]">
                             <Download size={14} />
@@ -213,14 +213,14 @@ const App = () => {
         )}
 
         {activeTab === 'Normas' && (
-           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 animate-in slide-in-from-right-8 duration-500">
               {[
                 { t: 'NT 07/23: Extintores', f: 'nt007.pdf.pdf', d: 'Guia prático para seleção e manuseio de extintores no CIOB.', c: 'text-yellow-500' },
                 { t: 'NT 36/23: Sist. Penais', f: 'nt362023.pdf', d: 'Protocolos de combate e segurança em unidades prisionais.', c: 'text-red-500' },
-                { t: 'AHA 2025: RCP/DEA', f: 'aha.pdf', d: 'Atualização mundial para ressuscitação e uso do desfibrilador.', c: 'text-blue-500' },
+                { t: 'AHA 2025: RCP/DEA', f: 'aha.pdf', d: 'Atualização mundial para ressuscitação e uso do desfibrilhador.', c: 'text-blue-500' },
                 { t: 'Lei Lucas: Escolas', f: 'leilucas.pdf', d: 'Obrigatoriedade de primeiros socorros em unidades escolares.', c: 'text-emerald-500' }
-              ].map((n, i) => (
-                <div key={i} className="bg-[#080a05] p-8 rounded-3xl border border-white/5 hover:border-[#facc15]/30 transition-all flex flex-col justify-between">
+              ].map((n, idx) => (
+                <div key={idx} className="bg-[#080a05] p-8 rounded-3xl border border-white/5 hover:border-[#facc15]/30 transition-all flex flex-col justify-between">
                   <div>
                     <h4 className={`text-xl font-black uppercase italic mb-2 ${n.c}`}>{n.t}</h4>
                     <p className="text-xs text-slate-500 leading-relaxed mb-6 italic">"{n.d}"</p>
